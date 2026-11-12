@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 12-Piece Winter Capsule That Makes 30 Outfits — Thread &amp; Theory</title>
+  <meta name="description" content="Twelve pieces in one color palette give you a month of outfits without repeating a single one. Here&#x27;s the checklist, the palette and the outfit grid." />
+  <meta property="og:title" content="The 12-Piece Winter Capsule That Makes 30 Outfits" />
+  <meta property="og:description" content="Twelve pieces in one color palette give you a month of outfits without repeating a single one. Here&#x27;s the checklist, the palette and the outfit grid." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1d1a17; --muted: #6b635b; --paper: #f7f2ec; --card: #ffffff;
+      --accent: #b4532a; --accent-dark: #8e3f1f; --line: #e4dbd0; --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .btn { display: inline-block; padding: 12px 24px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; border: none; cursor: pointer; transition: background .2s; font-size: 1rem; }
+    .btn:hover { background: var(--accent-dark); }
+
+    header { position: sticky; top: 0; z-index: 10; background: rgba(247,242,236,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: "Fraunces", serif; font-size: 1.4rem; font-weight: 600; }
+    .logo span { color: var(--accent); }
+    .back { font-weight: 500; color: var(--muted); }
+    .back:hover { color: var(--ink); }
+    .progress { position: absolute; left: 0; bottom: -1px; height: 3px; width: 0; background: var(--accent); }
+
+    .article-head { max-width: 760px; margin: 0 auto; padding: 64px 24px 32px; }
+    .tag { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 600; color: var(--accent); }
+    .article-head h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.12; margin: 14px 0 18px; }
+    .standfirst { font-size: 1.2rem; color: var(--muted); }
+    .meta { margin-top: 20px; font-size: .9rem; color: var(--muted); }
+
+    article.content { max-width: 760px; margin: 0 auto; padding: 0 24px 48px; font-size: 1.08rem; }
+    .content h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(1.6rem, 3.2vw, 2.1rem); line-height: 1.2; margin: 56px 0 16px; scroll-margin-top: 90px; }
+    .content h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.35rem; margin: 36px 0 12px; scroll-margin-top: 90px; }
+    .content p { margin: 0 0 18px; }
+    .content ul, .content ol { margin: 0 0 22px 1.4em; }
+    .content li { margin-bottom: 8px; }
+    .content li > p { margin-bottom: 6px; }
+    .content strong { font-weight: 600; }
+    .content a { color: var(--accent); text-decoration: underline; }
+    .content hr { border: none; height: 1px; background: var(--line); margin: 48px 0; }
+
+    .table-wrap { overflow-x: auto; margin: 8px 0 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); -webkit-overflow-scrolling: touch; }
+    .content table { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 520px; }
+    .content th, .content td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    .content th { background: #efe6dc; font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; }
+    .content tr:last-child td { border-bottom: none; }
+    .content tbody tr:nth-child(even) { background: #fbf8f4; }
+
+    .content ul.checklist { list-style: none; margin-left: 0; }
+    .content ul.checklist li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 14px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+    .content ul.checklist input { flex-shrink: 0; width: 20px; height: 20px; margin-top: 4px; accent-color: var(--accent); cursor: pointer; }
+    .content ul.checklist label { cursor: pointer; }
+    .content ul.checklist input:checked + label { opacity: .55; text-decoration: line-through; }
+
+    .newsletter { max-width: 760px; margin: 0 auto 72px; padding: 0 24px; }
+    .newsletter-box { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 40px 28px; text-align: center; }
+    .newsletter-box h2 { font-family: "Fraunces", serif; font-size: 1.7rem; margin-bottom: 10px; }
+    .newsletter-box p { color: var(--muted); margin-bottom: 20px; }
+    .signup { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; }
+    .signup input { flex: 1; padding: 12px 18px; border-radius: 999px; border: 1.5px solid var(--line); font: inherit; background: var(--paper); outline: none; }
+    .signup input:focus { border-color: var(--accent); }
+    .form-msg { margin-top: 12px; font-weight: 500; min-height: 1.5em; }
+
+    .more { max-width: 760px; margin: 0 auto 72px; padding: 0 24px; }
+    .more h2 { font-family: "Fraunces", serif; font-size: 1.5rem; margin-bottom: 16px; }
+    .more-grid { display: grid; gap: 14px; }
+    .more-grid a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; transition: transform .2s; }
+    .more-grid a:hover { transform: translateY(-3px); }
+    .more-grid strong { font-family: "Fraunces", serif; font-size: 1.1rem; display: block; margin-top: 4px; }
+
+    footer { border-top: 1px solid var(--line); padding: 32px 0; }
+    .foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .copy { color: var(--muted); font-size: .85rem; }
+
+    @media (max-width: 640px) {
+      .article-head { padding-top: 40px; }
+      article.content { font-size: 1.02rem; }
+      .signup { flex-direction: column; }
+    }
+    @media print {
+      header, .newsletter, .more, footer { display: none; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a href="index.html" class="logo">Thread <span>&amp;</span> Theory</a>
+      <a href="index.html#posts" class="back">&larr; All articles</a>
+    </div>
+    <div class="progress" id="progress"></div>
+  </header>
+
+  <main>
+    <div class="article-head">
+      <span class="tag">Capsule Wardrobe</span>
+      <h1>The 12-Piece Winter Capsule That Makes 30 Outfits</h1>
+      <p class="standfirst">Twelve pieces in one color palette give you a month of outfits without repeating a single one. Here&#x27;s the checklist, the palette and the outfit grid.</p>
+      <p class="meta">10 min read</p>
+    </div>
+
+    <article class="content">
+<p>Winter is when closets get the most crowded and the least useful. Bulky knits pile up, coats take over the hallway, and you still end up wearing the same sweater four days in a row.</p>
+<p>This capsule fixes that with <strong>12 pieces</strong>: 5 tops, 3 bottoms, 2 layers and 2 pairs of shoes. Every top works with every bottom, every layer works with every outfit, and both pairs of shoes go with everything. That's how 12 pieces become <strong>30 complete outfits</strong>, one for every day of the month.</p>
+<p>Here's what's inside:</p>
+<ul>
+<li>The color palette that makes it all work</li>
+<li>The 12-piece checklist, with what to look for in each piece</li>
+<li>The 30-outfit grid, ready to screenshot</li>
+<li>Bonus layering combinations</li>
+<li>Swaps for mild winters and modest dressing</li>
+<li>Tips for making a small wardrobe feel fresh all season</li>
+</ul>
+<hr />
+<h2 id="the-color-palette">The color palette</h2>
+<p>A small capsule only works if every color goes with every other color. This palette uses the <strong>3–2–1 formula</strong>: three neutrals, two supporting colors and one accent.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Color</th>
+<th>Where it shows up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Neutral (dark)</td>
+<td><strong>Charcoal</strong></td>
+<td>Turtleneck, wool trousers</td>
+</tr>
+<tr>
+<td>Neutral (light)</td>
+<td><strong>Cream</strong></td>
+<td>Sweater, striped top</td>
+</tr>
+<tr>
+<td>Neutral (warm)</td>
+<td><strong>Camel</strong></td>
+<td>Wool coat, midi skirt</td>
+</tr>
+<tr>
+<td>Supporting</td>
+<td><strong>Navy</strong></td>
+<td>Blazer, stripe</td>
+</tr>
+<tr>
+<td>Supporting</td>
+<td><strong>Indigo denim</strong></td>
+<td>Jeans</td>
+</tr>
+<tr>
+<td>Accent</td>
+<td><strong>Burgundy</strong></td>
+<td>Sweater, plus a scarf or bag if you like</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Why this palette works:</strong></p>
+<ul>
+<li>Charcoal, cream and camel all go with each other, so any top goes with any bottom.</li>
+<li>Navy and denim are soft enough to act like neutrals, but they add more depth than an all-beige wardrobe.</li>
+<li>Burgundy is a rich winter color that goes with every neutral. One burgundy piece makes an outfit look planned.</li>
+</ul>
+<p><strong>Make it yours:</strong> Swap charcoal for black, camel for chocolate brown, or burgundy for forest green or deep plum. Keep the same structure and the outfits still work.</p>
+<hr />
+<h2 id="the-12-piece-checklist">The 12-piece checklist</h2>
+<p>Each piece is chosen for versatility: simple shapes, warm fabrics and colors that work with everything else on the list.</p>
+<h3 id="tops-5">Tops (5)</h3>
+<ul class="checklist">
+<li><input type="checkbox" id="c1" /><label for="c1"><strong>1. Cream crew-neck sweater</strong><br />Look for merino wool or a wool-cashmere blend, fine to medium knit. A fine knit can go under a blazer, and a medium one is warm enough on its own.</label></li>
+<li><input type="checkbox" id="c2" /><label for="c2"><strong>2. Charcoal turtleneck</strong><br />Fitted but not tight, in merino or a soft cotton-modal blend. This is the most versatile piece in the capsule: it works for the office, weekends and evenings.</label></li>
+<li><input type="checkbox" id="c3" /><label for="c3"><strong>3. White button-down shirt</strong><br />Crisp cotton poplin or oxford cloth with a regular fit. You can wear it alone, tucked under a sweater, or with the collar out.</label></li>
+<li><input type="checkbox" id="c4" /><label for="c4"><strong>4. Navy-and-cream striped long-sleeve top</strong><br />A classic Breton-style stripe in thick cotton jersey. It makes the capsule look relaxed and keeps it from feeling too formal.</label></li>
+<li><input type="checkbox" id="c5" /><label for="c5"><strong>5. Burgundy knit sweater</strong><br />Your accent piece. A cable knit or ribbed texture adds interest. Look for wool or a wool blend that won't pill quickly.</label></li>
+</ul>
+<h3 id="bottoms-3">Bottoms (3)</h3>
+<ul class="checklist">
+<li><input type="checkbox" id="c6" /><label for="c6"><strong>6. Dark indigo straight-leg jeans</strong><br />Dark wash, no rips or fading. Straight or slightly wide legs work with both boots and sneakers.</label></li>
+<li><input type="checkbox" id="c7" /><label for="c7"><strong>7. Charcoal wool trousers</strong><br />Tailored with a front crease. A wool blend with a little stretch is warm and comfortable. These make every top look office-ready.</label></li>
+<li><input type="checkbox" id="c8" /><label for="c8"><strong>8. Camel knit or wool midi skirt</strong><br />A-line or straight, hitting below the knee. It looks good with boots and keeps the capsule from being all trousers. Wear tights underneath on cold days.</label></li>
+</ul>
+<h3 id="layers-2">Layers (2)</h3>
+<ul class="checklist">
+<li><input type="checkbox" id="c9" /><label for="c9"><strong>9. Camel wool coat</strong><br />Your biggest investment. Choose at least 60% wool, a length that covers your hips or longer, and a simple single-breasted shape. Camel brightens dark winter outfits and looks expensive.</label></li>
+<li><input type="checkbox" id="c10" /><label for="c10"><strong>10. Navy blazer</strong><br />Single-breasted, slightly relaxed fit so a sweater fits underneath. A wool or wool-blend blazer works for the office and weekends.</label></li>
+</ul>
+<h3 id="shoes-2">Shoes (2)</h3>
+<ul class="checklist">
+<li><input type="checkbox" id="c11" /><label for="c11"><strong>11. Dark brown or black leather ankle boots</strong><br />A low block heel or flat sole you can walk in all day. Leather (or a good faux leather) with a water-resistant finish.</label></li>
+<li><input type="checkbox" id="c12" /><label for="c12"><strong>12. White leather sneakers</strong><br />Minimal, clean and in leather rather than canvas, so they look smart and wipe clean.</label></li>
+</ul>
+<h3 id="extras-that-dont-count-toward-the-12">Extras that don't count toward the 12</h3>
+<p>These don't change the outfit count, but they make the outfits look finished:</p>
+<ul class="checklist">
+<li><input type="checkbox" id="c13" /><label for="c13">Burgundy or cream wool scarf</label></li>
+<li><input type="checkbox" id="c14" /><label for="c14">Leather belt (match it to your boots)</label></li>
+<li><input type="checkbox" id="c15" /><label for="c15">Everyday tote or shoulder bag in a neutral</label></li>
+<li><input type="checkbox" id="c16" /><label for="c16">Simple gold or silver jewelry</label></li>
+<li><input type="checkbox" id="c17" /><label for="c17">Opaque tights for the skirt</label></li>
+<li><input type="checkbox" id="c18" /><label for="c18">Warm hat and gloves</label></li>
+</ul>
+<hr />
+<h2 id="the-outfit-math">The outfit math</h2>
+<p>Here's how 12 pieces turn into 30 outfits:</p>
+<ul>
+<li><strong>5 tops × 3 bottoms = 15 base outfits.</strong> Every top works with every bottom.</li>
+<li><strong>Each base outfit is styled two ways</strong> by changing the layer (coat, blazer or none) and the shoes (boots or sneakers).</li>
+<li><strong>15 × 2 = 30 outfits.</strong></li>
+</ul>
+<p>And that's before you count the layering combinations in the bonus section.</p>
+<hr />
+<h2 id="the-30-outfit-grid">The 30-outfit grid</h2>
+<p>Screenshot this table and pick an outfit each morning.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Top</th>
+<th>Bottom</th>
+<th>Layer</th>
+<th>Shoes</th>
+<th>Wear it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Cream sweater</td>
+<td>Jeans</td>
+<td>Camel coat</td>
+<td>Sneakers</td>
+<td>Weekend coffee</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cream sweater</td>
+<td>Jeans</td>
+<td>Navy blazer</td>
+<td>Ankle boots</td>
+<td>Smart-casual Thursday</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cream sweater</td>
+<td>Wool trousers</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Office day</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cream sweater</td>
+<td>Wool trousers</td>
+<td>None</td>
+<td>Sneakers</td>
+<td>Work from home, then errands</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cream sweater</td>
+<td>Midi skirt</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Brunch</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Cream sweater</td>
+<td>Midi skirt</td>
+<td>Navy blazer</td>
+<td>Ankle boots</td>
+<td>Lunch meeting</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Charcoal turtleneck</td>
+<td>Jeans</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>City walk</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Charcoal turtleneck</td>
+<td>Jeans</td>
+<td>Navy blazer</td>
+<td>Sneakers</td>
+<td>Creative office</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Charcoal turtleneck</td>
+<td>Wool trousers</td>
+<td>Navy blazer</td>
+<td>Ankle boots</td>
+<td>Important meeting</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Charcoal turtleneck</td>
+<td>Wool trousers</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Dinner out</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Charcoal turtleneck</td>
+<td>Midi skirt</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Theater or concert</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Charcoal turtleneck</td>
+<td>Midi skirt</td>
+<td>None</td>
+<td>Ankle boots</td>
+<td>Dinner with friends at home</td>
+</tr>
+<tr>
+<td>13</td>
+<td>White shirt</td>
+<td>Jeans</td>
+<td>Navy blazer</td>
+<td>Sneakers</td>
+<td>Casual office</td>
+</tr>
+<tr>
+<td>14</td>
+<td>White shirt</td>
+<td>Jeans</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Weekend lunch</td>
+</tr>
+<tr>
+<td>15</td>
+<td>White shirt</td>
+<td>Wool trousers</td>
+<td>Navy blazer</td>
+<td>Ankle boots</td>
+<td>Interview or presentation</td>
+</tr>
+<tr>
+<td>16</td>
+<td>White shirt</td>
+<td>Wool trousers</td>
+<td>Camel coat</td>
+<td>Sneakers</td>
+<td>Busy commute day</td>
+</tr>
+<tr>
+<td>17</td>
+<td>White shirt</td>
+<td>Midi skirt</td>
+<td>Navy blazer</td>
+<td>Ankle boots</td>
+<td>Work lunch</td>
+</tr>
+<tr>
+<td>18</td>
+<td>White shirt</td>
+<td>Midi skirt</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Family visit</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Striped top</td>
+<td>Jeans</td>
+<td>None</td>
+<td>Sneakers</td>
+<td>Weekend errands</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Striped top</td>
+<td>Jeans</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Day trip or market</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Striped top</td>
+<td>Wool trousers</td>
+<td>Navy blazer</td>
+<td>Sneakers</td>
+<td>Relaxed office day</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Striped top</td>
+<td>Wool trousers</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Travel day</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Striped top</td>
+<td>Midi skirt</td>
+<td>Camel coat</td>
+<td>Sneakers</td>
+<td>Museum or gallery</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Striped top</td>
+<td>Midi skirt</td>
+<td>Navy blazer</td>
+<td>Ankle boots</td>
+<td>Coffee date</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Burgundy sweater</td>
+<td>Jeans</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Holiday shopping</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Burgundy sweater</td>
+<td>Jeans</td>
+<td>None</td>
+<td>Sneakers</td>
+<td>Movie night</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Burgundy sweater</td>
+<td>Wool trousers</td>
+<td>Navy blazer</td>
+<td>Ankle boots</td>
+<td>Office holiday party</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Burgundy sweater</td>
+<td>Wool trousers</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Evening dinner</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Burgundy sweater</td>
+<td>Midi skirt</td>
+<td>Camel coat</td>
+<td>Ankle boots</td>
+<td>Family gathering</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Burgundy sweater</td>
+<td>Midi skirt</td>
+<td>Navy blazer</td>
+<td>Ankle boots</td>
+<td>Celebration dinner</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How to use the grid:</strong></p>
+<ul>
+<li><strong>Plan a week at a time.</strong> Pick five work outfits and two weekend outfits on Sunday evening.</li>
+<li><strong>Mix it up.</strong> Don't wear the same top two days in a row. Rotating gives knits time to air out and keep their shape.</li>
+<li><strong>Make it your own.</strong> Cross out any outfit that doesn't feel like you, and add your own in the margins.</li>
+</ul>
+<hr />
+<h2 id="bonus-layering-combinations">Bonus: layering combinations</h2>
+<p>Layering two tops gives you even more outfits on the coldest days. These all work with any of the three bottoms:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Layer combo</th>
+<th>How to wear it</th>
+<th>Why it works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>White shirt under cream sweater</td>
+<td>Collar and cuffs showing</td>
+<td>Polished, preppy, office-ready</td>
+</tr>
+<tr>
+<td>White shirt under burgundy sweater</td>
+<td>Collar out, sleeves pushed up slightly</td>
+<td>Adds color while staying smart</td>
+</tr>
+<tr>
+<td>Striped top under navy blazer</td>
+<td>Sleeves rolled to show the stripe</td>
+<td>Relaxed but put-together</td>
+</tr>
+<tr>
+<td>Charcoal turtleneck under white shirt</td>
+<td>Shirt worn open like a light jacket</td>
+<td>An easy, modern layered look</td>
+</tr>
+<tr>
+<td>White shirt worn open over striped top</td>
+<td>Shirt untucked, sleeves rolled</td>
+<td>Casual weekend layering</td>
+</tr>
+</tbody>
+</table></div>
+<p>Four of these combinations work with all three bottoms, and the last works best with jeans. That's <strong>13 or more extra outfits</strong>, which takes your total past 40.</p>
+<hr />
+<h2 id="styling-tips-to-keep-it-fresh">Styling tips to keep it fresh</h2>
+<ol>
+<li><strong>Change the tuck.</strong> A full tuck, a front tuck or no tuck makes the same sweater look different.</li>
+<li><strong>Push up your sleeves.</strong> It instantly makes a knit look more relaxed and shows off a bracelet or watch.</li>
+<li><strong>Wear the coat like a cape.</strong> Over your shoulders for dinners and events, buttoned for cold commutes.</li>
+<li><strong>Use the scarf as your accent.</strong> A burgundy scarf with the charcoal turtleneck looks like a whole new outfit.</li>
+<li><strong>Belt the sweaters.</strong> A thin leather belt over the cream or burgundy sweater, worn with the midi skirt, gives the outfit shape.</li>
+<li><strong>Repeat on purpose.</strong> Wearing a favorite outfit again isn't a failure. It means the capsule is working.</li>
+</ol>
+<hr />
+<h2 id="swaps-for-your-climate-and-style">Swaps for your climate and style</h2>
+<h3 id="for-mild-winters-1020c-5068f">For mild winters (10–20°C / 50–68°F)</h3>
+<p>If your winter is cool rather than freezing, as in Riyadh, Dubai or Los Angeles:</p>
+<ul>
+<li>Swap the <strong>wool coat</strong> for a camel trench coat or a light camel jacket.</li>
+<li>Swap the <strong>burgundy wool sweater</strong> for a fine-knit burgundy cotton sweater.</li>
+<li>Swap the <strong>wool trousers</strong> for heavy cotton or crepe trousers.</li>
+<li>Keep the turtleneck, but choose a thin cotton or modal version.</li>
+</ul>
+<h3 id="for-modest-dressing">For modest dressing</h3>
+<ul>
+<li>Swap the <strong>midi skirt</strong> for a camel maxi skirt or wide-leg trousers.</li>
+<li>Swap the <strong>striped top</strong> for a longline striped tunic.</li>
+<li>Add a <strong>long knit cardigan in charcoal or camel</strong> as an extra layer.</li>
+<li>Choose <strong>hijabs in cream, camel, navy and burgundy</strong>. They go with every outfit in the grid and work as your accessories.</li>
+<li>Choose a <strong>longer coat</strong> that falls below the knee.</li>
+</ul>
+<h3 id="for-menswear">For menswear</h3>
+<ul>
+<li>Swap the <strong>midi skirt</strong> for camel or olive chinos.</li>
+<li>Swap the <strong>striped top</strong> for a navy knit polo or Henley.</li>
+<li>Keep everything else. The palette and the grid work the same way.</li>
+</ul>
+<hr />
+<h2 id="shopping-tips-for-your-12-pieces">Shopping tips for your 12 pieces</h2>
+<ul>
+<li><strong>Start with what you already own.</strong> You probably already have half the list. Shop only for the gaps.</li>
+<li><strong>Spend most on the coat and boots.</strong> You'll wear them almost every day, so they have the lowest cost per wear.</li>
+<li><strong>Save on the striped top and shirt.</strong> Good basics are easy to find at lower prices.</li>
+<li><strong>Check the fabric label.</strong> Look for wool, merino, cashmere blends or thick cotton. Avoid knits that are 100% acrylic, which pill fast and don't keep you warm.</li>
+<li><strong>Try on every top under the blazer and coat.</strong> If a sweater is too bulky to fit under your layers, it won't work in this capsule.</li>
+<li><strong>Buy second-hand for wool pieces.</strong> Coats, blazers and wool trousers are often available in great condition on resale sites for much less.</li>
+</ul>
+<hr />
+<h2 id="your-winter-capsule-in-one-glance">Your winter capsule in one glance</h2>
+<p><strong>12 pieces:</strong> 5 tops, 3 bottoms, 2 layers, 2 pairs of shoes
+<strong>1 palette:</strong> charcoal, cream, camel, navy, denim and burgundy
+<strong>30 outfits</strong> in the grid, <strong>40+</strong> with layering</p>
+<p>Fewer pieces, less stress and more outfits than you'd guess. That's the winter capsule.</p>
+<p><strong>Want the printable checklist and outfit grid?</strong> Subscribe to the Thread &amp; Theory Sunday Edit and get them free, plus new outfit formulas every week.</p>
+<p><em>Which outfit from the grid are you wearing first? Tell us in the comments.</em></p>
+    </article>
+
+    <section class="newsletter" id="newsletter">
+      <div class="newsletter-box">
+        <h2>Get the Sunday Edit</h2>
+        <p>Outfit formulas, honest product picks and new guides in your inbox every week.</p>
+        <form class="signup" id="signup-form" novalidate>
+          <input type="email" id="email" placeholder="you@example.com" aria-label="Email address" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <div class="form-msg" id="form-msg" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="more">
+      <h2>Keep reading</h2>
+      <div class="more-grid">
+        <a href="capsule-wardrobe-guide.html"><span class="tag">Capsule Wardrobe</span><strong>How to Build a Capsule Wardrobe</strong></a>
+        <a href="spot-quality-fabric-60-seconds.html"><span class="tag">Smart Shopping</span><strong>How to Spot Quality Fabric in Under 60 Seconds</strong></a>
+        <a href="5-office-outfit-formulas.html"><span class="tag">Styling Guides</span><strong>5 Outfit Formulas for Every Office Dress Code</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <a href="index.html" class="logo">Thread <span>&amp;</span> Theory</a>
+      <p class="copy">&copy; <span id="year"></span> Thread &amp; Theory. Some links are affiliate links.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Reading progress bar
+    const bar = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+      bar.style.width = pct + '%';
+    }, { passive: true });
+
+    // Checklists: remember ticked boxes on this device
+    document.querySelectorAll('.checklist input').forEach(box => {
+      const key = 'tt:' + location.pathname + ':' + box.id;
+      try { box.checked = localStorage.getItem(key) === '1'; } catch (e) {}
+      box.addEventListener('change', () => {
+        try { localStorage.setItem(key, box.checked ? '1' : '0'); } catch (e) {}
+      });
+    });
+
+    // Newsletter form (front-end only — connect to Mailchimp, ConvertKit, etc.)
+    const form = document.getElementById('signup-form');
+    const msg = document.getElementById('form-msg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        msg.style.color = '#b4532a';
+        msg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      msg.style.color = '#3d7a3d';
+      msg.textContent = "You're in! Check your inbox.";
+      form.reset();
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
