@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Build a Capsule Wardrobe — Thread &amp; Theory</title>
+  <meta name="description" content="A step-by-step guide to owning fewer clothes and getting dressed faster, with more outfits than you have now." />
+  <meta property="og:title" content="How to Build a Capsule Wardrobe" />
+  <meta property="og:description" content="A step-by-step guide to owning fewer clothes and getting dressed faster, with more outfits than you have now." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1d1a17; --muted: #6b635b; --paper: #f7f2ec; --card: #ffffff;
+      --accent: #b4532a; --accent-dark: #8e3f1f; --line: #e4dbd0; --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .btn { display: inline-block; padding: 12px 24px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; border: none; cursor: pointer; transition: background .2s; font-size: 1rem; }
+    .btn:hover { background: var(--accent-dark); }
+
+    header { position: sticky; top: 0; z-index: 10; background: rgba(247,242,236,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: "Fraunces", serif; font-size: 1.4rem; font-weight: 600; }
+    .logo span { color: var(--accent); }
+    .back { font-weight: 500; color: var(--muted); }
+    .back:hover { color: var(--ink); }
+    .progress { position: absolute; left: 0; bottom: -1px; height: 3px; width: 0; background: var(--accent); }
+
+    .article-head { max-width: 760px; margin: 0 auto; padding: 64px 24px 32px; }
+    .tag { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 600; color: var(--accent); }
+    .article-head h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.12; margin: 14px 0 18px; }
+    .standfirst { font-size: 1.2rem; color: var(--muted); }
+    .meta { margin-top: 20px; font-size: .9rem; color: var(--muted); }
+
+    article.content { max-width: 760px; margin: 0 auto; padding: 0 24px 48px; font-size: 1.08rem; }
+    .content h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(1.6rem, 3.2vw, 2.1rem); line-height: 1.2; margin: 56px 0 16px; scroll-margin-top: 90px; }
+    .content h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.35rem; margin: 36px 0 12px; scroll-margin-top: 90px; }
+    .content p { margin: 0 0 18px; }
+    .content ul, .content ol { margin: 0 0 22px 1.4em; }
+    .content li { margin-bottom: 8px; }
+    .content li > p { margin-bottom: 6px; }
+    .content strong { font-weight: 600; }
+    .content a { color: var(--accent); text-decoration: underline; }
+    .content hr { border: none; height: 1px; background: var(--line); margin: 48px 0; }
+
+    .table-wrap { overflow-x: auto; margin: 8px 0 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); -webkit-overflow-scrolling: touch; }
+    .content table { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 520px; }
+    .content th, .content td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    .content th { background: #efe6dc; font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; }
+    .content tr:last-child td { border-bottom: none; }
+    .content tbody tr:nth-child(even) { background: #fbf8f4; }
+
+    .content ul.checklist { list-style: none; margin-left: 0; }
+    .content ul.checklist li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 14px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+    .content ul.checklist input { flex-shrink: 0; width: 20px; height: 20px; margin-top: 4px; accent-color: var(--accent); cursor: pointer; }
+    .content ul.checklist label { cursor: pointer; }
+    .content ul.checklist input:checked + label { opacity: .55; text-decoration: line-through; }
+
+    .newsletter { max-width: 760px; margin: 0 auto 72px; padding: 0 24px; }
+    .newsletter-box { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 40px 28px; text-align: center; }
+    .newsletter-box h2 { font-family: "Fraunces", serif; font-size: 1.7rem; margin-bottom: 10px; }
+    .newsletter-box p { color: var(--muted); margin-bottom: 20px; }
+    .signup { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; }
+    .signup input { flex: 1; padding: 12px 18px; border-radius: 999px; border: 1.5px solid var(--line); font: inherit; background: var(--paper); outline: none; }
+    .signup input:focus { border-color: var(--accent); }
+    .form-msg { margin-top: 12px; font-weight: 500; min-height: 1.5em; }
+
+    .more { max-width: 760px; margin: 0 auto 72px; padding: 0 24px; }
+    .more h2 { font-family: "Fraunces", serif; font-size: 1.5rem; margin-bottom: 16px; }
+    .more-grid { display: grid; gap: 14px; }
+    .more-grid a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; transition: transform .2s; }
+    .more-grid a:hover { transform: translateY(-3px); }
+    .more-grid strong { font-family: "Fraunces", serif; font-size: 1.1rem; display: block; margin-top: 4px; }
+
+    footer { border-top: 1px solid var(--line); padding: 32px 0; }
+    .foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .copy { color: var(--muted); font-size: .85rem; }
+
+    @media (max-width: 640px) {
+      .article-head { padding-top: 40px; }
+      article.content { font-size: 1.02rem; }
+      .signup { flex-direction: column; }
+    }
+    @media print {
+      header, .newsletter, .more, footer { display: none; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a href="index.html" class="logo">Thread <span>&amp;</span> Theory</a>
+      <a href="index.html#posts" class="back">&larr; All articles</a>
+    </div>
+    <div class="progress" id="progress"></div>
+  </header>
+
+  <main>
+    <div class="article-head">
+      <span class="tag">Capsule Wardrobe</span>
+      <h1>How to Build a Capsule Wardrobe</h1>
+      <p class="standfirst">A step-by-step guide to owning fewer clothes and getting dressed faster, with more outfits than you have now.</p>
+      <p class="meta">14 min read</p>
+    </div>
+
+    <article class="content">
+<p>You have a full closet and still nothing to wear. That is not a shopping problem. It is a planning problem, and a capsule wardrobe fixes it.</p>
+<p>A capsule wardrobe is a small, edited collection of clothes, usually 25 to 40 pieces per season, where almost everything works with everything else. The term goes back to London boutique owner Susie Faux in the 1970s. Designer Donna Karan made it famous with her "Seven Easy Pieces" collection in 1985.</p>
+<p>The idea is simple: if every top goes with every bottom, 10 tops and 5 bottoms give you 50 outfits. You stop buying things that sit unworn with the tags on.</p>
+<p><strong>By the end of this guide you will have:</strong></p>
+<ul>
+<li>A clear picture of what your life actually needs you to wear</li>
+<li>A closet edited down to pieces you love and use</li>
+<li>A color palette that makes mixing and matching automatic</li>
+<li>A checklist of versatile core pieces, and how to spot good ones</li>
+<li>Outfit formulas you can use on autopilot</li>
+<li>A system for keeping your capsule working season after season</li>
+</ul>
+<p>Grab a notebook (or your phone's notes app). Let's build it.</p>
+<h2 id="step-1-start-with-your-real-life-not-your-dream-life">Step 1: Start with your real life, not your dream life</h2>
+<p>The most common capsule mistake is building a wardrobe for the person you wish you were. If you work from home five days a week, a closet full of blazers will not help you.</p>
+<p>Think through a typical week and estimate how much of your time goes to each activity. Then fill in your own numbers:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Example: hybrid office worker</th>
+<th>You</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Office / meetings</td>
+<td>40%</td>
+<td></td>
+</tr>
+<tr>
+<td>Working from home</td>
+<td>20%</td>
+<td></td>
+</tr>
+<tr>
+<td>Errands and casual weekends</td>
+<td>25%</td>
+<td></td>
+</tr>
+<tr>
+<td>Workouts / active</td>
+<td>10%</td>
+<td></td>
+</tr>
+<tr>
+<td>Events and evenings out</td>
+<td>5%</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How to use it:</strong> your capsule should roughly match these percentages. In the example above, about 40% of the pieces should be office-ready, and only one or two should be dressy.</p>
+<p>Also write down three practical limits:</p>
+<ol>
+<li><strong>Climate.</strong> How hot, cold or rainy is your season? A Riyadh summer and a London winter need very different capsules.</li>
+<li><strong>Dress codes.</strong> Is there a uniform, modesty requirement or office rule you have to follow?</li>
+<li><strong>Care.</strong> Will you actually iron, hand-wash or dry-clean? If not, skip the fabrics that need it.</li>
+</ol>
+<p><strong>Quick tip:</strong> Look at your phone photos from the last three months. They show what you really wear, which is often different from what you think you wear.</p>
+<h2 id="step-2-audit-and-edit-your-closet">Step 2: Audit and edit your closet</h2>
+<p>Your capsule is probably already in your closet. You just can't see it yet. Set aside two hours, take everything out, and sort each piece into one of four piles:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Pile</th>
+<th>What goes here</th>
+<th>What to do with it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Love</strong></td>
+<td>You wear it often, it fits, you feel good in it</td>
+<td>Back in the closet. This is your capsule's core.</td>
+</tr>
+<tr>
+<td><strong>Maybe</strong></td>
+<td>You like it but rarely wear it</td>
+<td>Box it with a date 90 days out. Not missed? Let it go.</td>
+</tr>
+<tr>
+<td><strong>Off-season</strong></td>
+<td>Fits your life, but wrong season</td>
+<td>Store it out of sight.</td>
+</tr>
+<tr>
+<td><strong>Go</strong></td>
+<td>Doesn't fit, damaged, or you haven't worn it in a year</td>
+<td>Donate, sell, recycle or tailor.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ask these questions about every "Maybe":</p>
+<ul>
+<li>Would I buy this again today at full price?</li>
+<li>Does it go with at least three other things I own?</li>
+<li>Is it the right size <strong>now</strong>, not in an imaginary future?</li>
+<li>Do I avoid it because of one fixable problem, like a missing button or a hem that's too long?</li>
+</ul>
+<p><strong>Look for patterns in the "Go" pile.</strong> Ten unworn printed tops tell you to stop buying printed tops. Several shirts with tight shoulders tell you which cut or brand doesn't suit you. These patterns are your best shopping guide.</p>
+<p><strong>Quick tip:</strong> Hang everything you keep facing the same way. Turn each hanger around after you wear the piece. After a season, anything still facing the original way is a strong candidate to go.</p>
+<h2 id="step-3-choose-a-color-palette">Step 3: Choose a color palette</h2>
+<p>The palette is what makes a capsule work. When your colors are planned, almost any top goes with almost any bottom, and you can get dressed in the dark.</p>
+<p>Use the <strong>3–2–1 formula:</strong></p>
+<ol>
+<li><strong>Three base neutrals (about 60% of the wardrobe).</strong> Your trousers, skirts, outerwear and shoes. Pick one dark neutral (black, navy, charcoal or chocolate brown), one light neutral (white, cream or light grey) and one mid-tone (camel, olive, taupe or denim).</li>
+<li><strong>Two supporting colors (about 30%).</strong> Softer shades for tops and knits, like dusty blue, sage, blush or rust.</li>
+<li><strong>One accent color (about 10%).</strong> A bold shade for a scarf, bag, shoes or one statement top, like burgundy, emerald or cobalt.</li>
+</ol>
+<p><strong>Three palettes to borrow:</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Palette</th>
+<th>Neutrals</th>
+<th>Supporting</th>
+<th>Accent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Classic city</td>
+<td>Navy, white, camel</td>
+<td>Light blue, grey</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>Warm earth</td>
+<td>Chocolate, cream, olive</td>
+<td>Rust, sand</td>
+<td>Mustard</td>
+</tr>
+<tr>
+<td>Soft modern</td>
+<td>Charcoal, ivory, taupe</td>
+<td>Blush, sage</td>
+<td>Emerald</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How to pick colors that suit you:</strong></p>
+<ul>
+<li>Hold pieces up to your face in daylight. Colors that suit you make your skin look clearer and eyes brighter. Wrong colors make you look tired.</li>
+<li>If gold jewelry looks better on you, lean toward warm neutrals (camel, olive, cream). If silver looks better, lean cool (navy, grey, pure white).</li>
+<li>Start with the colors already in your "Love" pile. You've been choosing your palette for years without knowing it.</li>
+</ul>
+<p><strong>Quick tip:</strong> Patterns are fine. Just choose ones that combine your palette colors, like a navy-and-white stripe or a camel check.</p>
+<h2 id="step-4-choose-versatile-core-pieces">Step 4: Choose versatile core pieces</h2>
+<p>A versatile piece is one you can wear at least three different ways. These seven tests tell you whether a piece earns its place.</p>
+<h3 id="the-7-versatility-tests">The 7 versatility tests</h3>
+<ol>
+<li><strong>The rule of three.</strong> Before you keep or buy anything, name three outfits you would make with it from pieces you already own. If you can't, it's an orphan. Leave it.</li>
+<li><strong>Dress up, dress down.</strong> The best pieces work in more than one setting. A white shirt goes under a blazer for the office and over a tee, open, on the weekend.</li>
+<li><strong>Simple shape, small details.</strong> Clean lines and classic cuts (straight-leg trousers, a crew neck, a midi skirt) mix more easily than dramatic sleeves or unusual hems. Let the interest come from texture, fit or a single detail.</li>
+<li><strong>Layer-friendly.</strong> Fine-knit sweaters, thin cardigans and button-downs can be worn alone in warm weather and layered in cold weather. That doubles their use.</li>
+<li><strong>Year-round fabric.</strong> Mid-weight cotton, merino wool, linen blends and good denim work across more months than heavy wool or sheer chiffon.</li>
+<li><strong>Fits you today.</strong> A piece that fits well gets worn. One that pulls or gapes gets avoided. Budget for small tailoring, like hemming trousers or taking in a waist.</li>
+<li><strong>Easy care.</strong> If it needs dry-cleaning after every wear, you'll save it for "special" and wear it less.</li>
+</ol>
+<h3 id="the-core-checklist">The core checklist</h3>
+<p>Use this as a starting point and adjust it to your lifestyle numbers from Step 1. It totals about 30 pieces, not counting underwear, workout gear and sleepwear.</p>
+<p><strong>Tops (10–12)</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" id="c1" /><label for="c1">2 white or cream tees (one crew, one V or scoop)</label></li>
+<li><input type="checkbox" id="c2" /><label for="c2">1 black or navy tee</label></li>
+<li><input type="checkbox" id="c3" /><label for="c3">1 striped long-sleeve top</label></li>
+<li><input type="checkbox" id="c4" /><label for="c4">1 crisp white button-down shirt</label></li>
+<li><input type="checkbox" id="c5" /><label for="c5">1 chambray or soft-colored shirt</label></li>
+<li><input type="checkbox" id="c6" /><label for="c6">2 fine-knit sweaters in neutrals</label></li>
+<li><input type="checkbox" id="c7" /><label for="c7">1 chunky knit or cardigan</label></li>
+<li><input type="checkbox" id="c8" /><label for="c8">2 blouses or tops in your supporting colors</label></li>
+<li><input type="checkbox" id="c9" /><label for="c9">1 statement top in your accent color</label></li>
+</ul>
+<p><strong>Bottoms (5–6)</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" id="c10" /><label for="c10">1 pair dark straight-leg jeans</label></li>
+<li><input type="checkbox" id="c11" /><label for="c11">1 pair light or mid-wash jeans</label></li>
+<li><input type="checkbox" id="c12" /><label for="c12">1 pair tailored trousers in a dark neutral</label></li>
+<li><input type="checkbox" id="c13" /><label for="c13">1 pair relaxed trousers (wide-leg or linen) in a light neutral</label></li>
+<li><input type="checkbox" id="c14" /><label for="c14">1 midi skirt or chinos</label></li>
+</ul>
+<p><strong>Dresses / one-pieces (1–3)</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" id="c15" /><label for="c15">1 simple dress in a dark neutral that works with flats or heels</label></li>
+<li><input type="checkbox" id="c16" /><label for="c16">1 casual day dress or jumpsuit</label></li>
+</ul>
+<p><strong>Layers and outerwear (3–4)</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" id="c17" /><label for="c17">1 tailored blazer</label></li>
+<li><input type="checkbox" id="c18" /><label for="c18">1 trench coat or light jacket</label></li>
+<li><input type="checkbox" id="c19" /><label for="c19">1 warm wool coat (cold climates)</label></li>
+<li><input type="checkbox" id="c20" /><label for="c20">1 casual jacket (denim, utility or leather-look)</label></li>
+</ul>
+<p><strong>Shoes (4–5)</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" id="c21" /><label for="c21">1 pair clean white sneakers</label></li>
+<li><input type="checkbox" id="c22" /><label for="c22">1 pair loafers or ballet flats</label></li>
+<li><input type="checkbox" id="c23" /><label for="c23">1 pair ankle boots</label></li>
+<li><input type="checkbox" id="c24" /><label for="c24">1 pair sandals or slides</label></li>
+<li><input type="checkbox" id="c25" /><label for="c25">1 pair dressy shoes (block heels or smart flats)</label></li>
+</ul>
+<p><strong>Accessories</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" id="c26" /><label for="c26">1 everyday tote or shoulder bag</label></li>
+<li><input type="checkbox" id="c27" /><label for="c27">1 small crossbody or evening bag</label></li>
+<li><input type="checkbox" id="c28" /><label for="c28">1 leather belt</label></li>
+<li><input type="checkbox" id="c29" /><label for="c29">2 scarves (one neutral, one in your accent color)</label></li>
+<li><input type="checkbox" id="c30" /><label for="c30">A few pieces of everyday jewelry</label></li>
+</ul>
+<p><strong>Quick tip:</strong> Accessories are the cheapest way to change a look. The same black dress reads "office" with loafers and a blazer, and "dinner" with heels, a bright scarf and earrings.</p>
+<h3 id="adapting-the-checklist">Adapting the checklist</h3>
+<ul>
+<li><strong>Modest dressing:</strong> Swap tees for long-sleeve tops and tunics, add a long cardigan or kimono, and include 2–3 abayas or maxi dresses plus hijabs in your neutral and accent colors.</li>
+<li><strong>Menswear:</strong> Replace dresses and skirts with extra shirts, an unstructured blazer, chinos in two colors and a knit polo.</li>
+<li><strong>Hot climates:</strong> Drop the wool coat and chunky knit. Add linen shirts, a second pair of light trousers and breathable sandals.</li>
+</ul>
+<h2 id="step-5-do-the-outfit-math">Step 5: Do the outfit math</h2>
+<p>This is where a capsule pays off. Ten tops and five bottoms that all match make 50 combinations. Add three layers and you have 150. Add four pairs of shoes and you have more outfits than days in the year.</p>
+<p>You don't need to plan all of them. Use <strong>outfit formulas</strong>: simple templates you repeat with different pieces.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Occasion</th>
+<th>Formula</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Office</td>
+<td>Tailored trousers + knit + loafers + structured bag</td>
+<td>Charcoal trousers, cream sweater, black loafers</td>
+</tr>
+<tr>
+<td>Client meeting</td>
+<td>Dress + blazer + dressy shoes</td>
+<td>Navy dress, camel blazer, block heels</td>
+</tr>
+<tr>
+<td>Weekend</td>
+<td>Jeans + tee + jacket + sneakers</td>
+<td>Dark denim, white tee, utility jacket, white sneakers</td>
+</tr>
+<tr>
+<td>Errands in heat</td>
+<td>Linen trousers + shirt + sandals</td>
+<td>Cream linen pants, chambray shirt, slides</td>
+</tr>
+<tr>
+<td>Dinner out</td>
+<td>Dark base + statement top or accessory + heels</td>
+<td>Black trousers, emerald blouse, gold earrings</td>
+</tr>
+<tr>
+<td>Travel</td>
+<td>Relaxed trousers + tee + cardigan + sneakers</td>
+<td>Wide-leg trousers, striped tee, long cardigan</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Build a "lookbook" in 20 minutes:</strong></p>
+<ol>
+<li>Lay out one bottom.</li>
+<li>Try every top with it and snap a photo of each combination that works.</li>
+<li>Repeat with each bottom.</li>
+<li>Save the photos in one album on your phone. On busy mornings, scroll and pick.</li>
+</ol>
+<p><strong>Quick tip:</strong> The "third piece" makes an outfit look intentional. Jeans and a tee are fine. Jeans, a tee and a blazer, a belt or a scarf look styled.</p>
+<h2 id="step-6-shop-smart-for-the-gaps">Step 6: Shop smart for the gaps</h2>
+<p>Compare your edited closet against the checklist and write down what's missing. That list is your shopping list, and nothing else goes in the basket.</p>
+<h3 id="think-in-cost-per-wear">Think in cost per wear</h3>
+<p>The price tag is not the real cost. Divide the price by how many times you'll wear the piece:</p>
+<p><strong>Cost per wear = Price ÷ Number of wears</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Price</th>
+<th>Wears per year</th>
+<th>Years</th>
+<th>Cost per wear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trend top</td>
+<td>$25</td>
+<td>4</td>
+<td>1</td>
+<td>$6.25</td>
+</tr>
+<tr>
+<td>Quality wool coat</td>
+<td>$250</td>
+<td>60</td>
+<td>5</td>
+<td>$0.83</td>
+</tr>
+<tr>
+<td>Good leather loafers</td>
+<td>$120</td>
+<td>80</td>
+<td>3</td>
+<td>$0.50</td>
+</tr>
+</tbody>
+</table></div>
+<p>Spend more on pieces you wear constantly (coat, jeans, shoes, bag). Save on pieces that wear out fast or that you wear less (tees, trend items).</p>
+<h3 id="60-second-quality-checks">60-second quality checks</h3>
+<ul>
+<li><strong>Read the label.</strong> Natural fibers (cotton, wool, linen, silk) or good blends last longer and breathe better than 100% polyester or acrylic.</li>
+<li><strong>Hold it to the light.</strong> If you can see straight through a tee or knit, it will lose its shape fast.</li>
+<li><strong>Check the seams.</strong> Gently pull them. Tight, even stitches with no gaps are a good sign. Patterned pieces should line up at the seams.</li>
+<li><strong>Scrunch it.</strong> Squeeze the fabric for five seconds. If it stays deeply creased, it will look wrinkled all day.</li>
+<li><strong>Test the hardware.</strong> Zippers should run smoothly. Buttons should be sewn on firmly, ideally with a spare.</li>
+</ul>
+<h3 id="rules-for-buying">Rules for buying</h3>
+<ol>
+<li><strong>Wait 48 hours</strong> before any non-essential purchase. If you still want it, and it passes the rule of three, buy it.</li>
+<li><strong>One in, one out.</strong> Each new piece replaces one you're letting go.</li>
+<li><strong>Buy second-hand first.</strong> Resale sites and thrift shops are the best place to find quality coats, blazers and leather goods at a fraction of the price.</li>
+<li><strong>Shop your list, not the sale.</strong> A 70% discount on something you won't wear is still 30% wasted.</li>
+</ol>
+<h2 id="step-7-maintain-and-rotate-your-capsule">Step 7: Maintain and rotate your capsule</h2>
+<p>A capsule is not a one-time project. A few small habits keep it working.</p>
+<p><strong>Every week</strong></p>
+<ul>
+<li>Hang or fold clothes as soon as you take them off. Clothes left on a chair get wrinkled and forgotten.</li>
+<li>Spot-clean marks right away instead of washing the whole piece.</li>
+</ul>
+<p><strong>Every month</strong></p>
+<ul>
+<li>Do a five-minute check: anything with a loose button, small hole or fallen hem goes into a repair bag. Fix the bag's contents in one sitting.</li>
+<li>Note anything you keep reaching for that you don't own. That's a real gap.</li>
+</ul>
+<p><strong>Every season (about every three months)</strong></p>
+<ol>
+<li>Pull out the off-season box and put away what you won't need.</li>
+<li>Keep a "core" of 10–15 pieces that work all year, such as jeans, tees, a blazer and sneakers.</li>
+<li>Swap in 10–15 seasonal pieces, like linen and sandals for summer or knits and boots for winter.</li>
+<li>Retire anything worn out and add it to your shopping list.</li>
+</ol>
+<p><strong>Make clothes last longer</strong></p>
+<ul>
+<li>Wash less often and in cold water. Most jeans and sweaters don't need a wash after every wear.</li>
+<li>Air-dry knits flat. The dryer shrinks and pills them.</li>
+<li>Use a fabric shaver on pilled sweaters. They'll look new in minutes.</li>
+<li>Store sweaters folded, not hung, so they don't stretch.</li>
+</ul>
+<h2 id="6-mistakes-to-avoid">6 mistakes to avoid</h2>
+<ol>
+<li><strong>Copying someone else's list exactly.</strong> A checklist is a starting point. If you never wear skirts, don't buy one because a guide said so.</li>
+<li><strong>Going all beige.</strong> Neutrals are the base, not the whole wardrobe. Your supporting and accent colors keep it from feeling boring.</li>
+<li><strong>Replacing everything at once.</strong> Build slowly over two or three months. Rushing leads to the same impulse buys you're trying to stop.</li>
+<li><strong>Ignoring fit.</strong> A $30 piece that fits perfectly beats a $300 piece that doesn't.</li>
+<li><strong>Forgetting shoes and bags.</strong> They connect your outfits. Mismatched accessories can break an otherwise well-planned capsule.</li>
+<li><strong>Treating the number as a rule.</strong> 33 pieces or 45 pieces, it doesn't matter. What matters is that you wear and love everything you own.</li>
+</ol>
+<h2 id="faq">FAQ</h2>
+<p><strong>How many pieces should a capsule wardrobe have?</strong>
+Most people land between 25 and 40 per season, not counting underwear, sleepwear and workout clothes. Start with what you have after your closet edit and adjust from there.</p>
+<p><strong>Isn't a capsule wardrobe boring?</strong>
+It's the opposite. When everything matches, you spend your creativity on styling instead of searching. Accessories and your accent color keep things fresh.</p>
+<p><strong>Do I have to get rid of my clothes?</strong>
+No. Store the "Maybe" and off-season pieces instead of donating them. Many people end up rotating them back in.</p>
+<p><strong>Can I build one on a tight budget?</strong>
+Yes. Start with what you already own, fill only the biggest gaps first, and shop second-hand for higher-cost items like coats and blazers.</p>
+<p><strong>Does it work for kids, men or modest dressers?</strong>
+Yes. The steps are the same. Only the checklist changes, as shown in Step 4.</p>
+<h2 id="your-next-step">Your next step</h2>
+<p>Don't try to do it all this weekend. Start with Step 1 and Step 2: map your week and clear out your closet. You'll be surprised how much of your capsule is already there.</p>
+<p><strong>Want the printable version?</strong> Subscribe to the Thread &amp; Theory Sunday Edit and get our free capsule wardrobe checklist, plus new outfit formulas every week.</p>
+<p><em>Which step are you starting with? Tell us in the comments.</em></p>
+    </article>
+
+    <section class="newsletter" id="newsletter">
+      <div class="newsletter-box">
+        <h2>Get the Sunday Edit</h2>
+        <p>Outfit formulas, honest product picks and new guides in your inbox every week.</p>
+        <form class="signup" id="signup-form" novalidate>
+          <input type="email" id="email" placeholder="you@example.com" aria-label="Email address" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <div class="form-msg" id="form-msg" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="more">
+      <h2>Keep reading</h2>
+      <div class="more-grid">
+        <a href="12-piece-winter-capsule.html"><span class="tag">Capsule Wardrobe</span><strong>The 12-Piece Winter Capsule That Makes 30 Outfits</strong></a>
+        <a href="spot-quality-fabric-60-seconds.html"><span class="tag">Smart Shopping</span><strong>How to Spot Quality Fabric in Under 60 Seconds</strong></a>
+        <a href="5-office-outfit-formulas.html"><span class="tag">Styling Guides</span><strong>5 Outfit Formulas for Every Office Dress Code</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <a href="index.html" class="logo">Thread <span>&amp;</span> Theory</a>
+      <p class="copy">&copy; <span id="year"></span> Thread &amp; Theory. Some links are affiliate links.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Reading progress bar
+    const bar = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+      bar.style.width = pct + '%';
+    }, { passive: true });
+
+    // Checklists: remember ticked boxes on this device
+    document.querySelectorAll('.checklist input').forEach(box => {
+      const key = 'tt:' + location.pathname + ':' + box.id;
+      try { box.checked = localStorage.getItem(key) === '1'; } catch (e) {}
+      box.addEventListener('change', () => {
+        try { localStorage.setItem(key, box.checked ? '1' : '0'); } catch (e) {}
+      });
+    });
+
+    // Newsletter form (front-end only — connect to Mailchimp, ConvertKit, etc.)
+    const form = document.getElementById('signup-form');
+    const msg = document.getElementById('form-msg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        msg.style.color = '#b4532a';
+        msg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      msg.style.color = '#3d7a3d';
+      msg.textContent = "You're in! Check your inbox.";
+      form.reset();
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
